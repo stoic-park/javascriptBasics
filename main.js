@@ -3,5 +3,5 @@
 
 console.log("hello world");
 
-let a;
+// let a;
 a = 6;
