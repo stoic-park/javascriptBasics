@@ -157,12 +157,31 @@ const simpleMultiply = (a, b) => {
 // function calculate(command, a, b)
 // command: add, substract, divide, multiply, remainder
 
+// function calculate(command, a, b) {
+//   return command(a, b);
+// }
+
+// const add = (a, b) => a + b;
+// const substract = (a, b) => a - b;
+// const divide = (a, b) => a / b;
+// const multiply = (a, b) => a * b;
+// const remainder = (a, b) => a % b;
+
 function calculate(command, a, b) {
-  return command(a, b);
+  switch (command) {
+    case "add":
+      return a + b;
+    case "substract":
+      return a - b;
+    case "divide":
+      return a / b;
+    case "multiply":
+      return a * b;
+    case "remainder":
+      return a % b;
+    default:
+      throw Error("unknown command");
+  }
 }
 
-const add = (a, b) => a + b;
-const substract = (a, b) => a - b;
-const divide = (a, b) => a / b;
-const multiply = (a, b) => a * b;
-const remainder = (a, b) => a % b;
+console.log(calculate("add", 2, 3));
